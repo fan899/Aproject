@@ -44,4 +44,7 @@ public class AdminService {
     public int updateById(int adminId,String adminPwd){
         return adminMapper.updateById(adminId,adminPwd);
     }
+
+    /*登录验证*/
+    public int login(int adminId,String adminPwd){return adminMapper.login(adminId,adminPwd);}
 }

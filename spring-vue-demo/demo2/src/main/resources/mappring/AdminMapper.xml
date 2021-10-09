@@ -27,4 +27,9 @@
     <update id="updateById">
         update admin set admin_pwd = #{adminPwd} where admin_id = #{adminId}
     </update>
+
+    <select id="login" resultMap="BaseResultMap">
+        select * from admin where admin_id = #{adminId} and admin_pwd = #{adminPwd}
+    </select>
+
 </mapper>

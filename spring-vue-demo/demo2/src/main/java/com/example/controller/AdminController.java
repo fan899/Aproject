@@ -57,4 +57,11 @@ public class AdminController {
         System.out.println("成功修改编号为"+adminId+"的数据");
         return adminId;
     }
+
+    /*登录验证*/
+    @RequestMapping("/login/{adminId},{adminPwd}")
+    public @ResponseBody int login(@PathVariable int adminId,@PathVariable String adminPwd){
+        int login = adminService.login(adminId, adminPwd);
+        return login;
+    }
 }

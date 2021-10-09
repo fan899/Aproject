@@ -24,4 +24,7 @@ public interface AdminMapper {
     /*根据adminId修改密码*/
     public int updateById(@Param("adminId") int adminId,@Param("adminPwd") String adminPwd);
 
+    /*登录验证adminId和密码*/
+    public int login(@Param("adminId") int adminId,@Param("adminPwd") String adminPwd);
+
 }
