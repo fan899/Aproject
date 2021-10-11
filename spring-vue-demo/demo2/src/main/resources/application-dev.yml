@@ -7,14 +7,3 @@ spring:
     password: abc1234.
     url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
-
-mybatis:
-  mapper-locations: classpath:mappring/*Mapper.xml
-  type-aliases-package: com.example.entity
-
-#showSql
-logging:
-  level:
-    com:
-      example:
-        mapper : debug
