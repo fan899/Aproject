@@ -1,5 +1,5 @@
 <template>
-    <div style="width: 100%; height: 100vh; background-color: darkslateblue;overflow: hidden">
+    <div style="width: 100%; height: 100vh; background-color: #222831;overflow: hidden">
         <div style="width: 400px;margin: 150px auto">
             <div style="color: #cccccc;font-size: 30px;text-align: center;padding: 15px">欢迎登录</div>
             <el-form ref="form" :model="form" size="normal">

@@ -6,3 +6,5 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+# node_modules
+spring-vue-demo/vue/node_modules/

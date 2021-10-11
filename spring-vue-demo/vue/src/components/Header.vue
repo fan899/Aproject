@@ -1,11 +1,11 @@
 
 <template>
-    <div style="height: 50px; line-height: 50px; border-bottom: 1px solid #ccc; display: flex">
-        <div style="width: 200px;padding-left: 30px;font-weight: bold;color: dodgerblue">后台管理</div>
+    <div style="height: 50px; background-color: #222831; line-height: 50px; border-bottom: 1px solid #ccc; display: flex">
+        <div style="width: 200px;padding-left: 30px;font-weight: bold;color: #E8E8E8">后台管理</div>
         <div style="flex: 1"></div>
         <div style="width: 100px">
             <el-dropdown :hide-on-click="false">
-                <span class="el-dropdown-link">
+                <span style="color: #E8E8E8" class="el-dropdown-link" >
                   设置<i class="el-icon-arrow-down el-icon--right"></i>
                 </span>
                 <template #dropdown>
