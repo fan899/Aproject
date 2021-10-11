@@ -4,14 +4,14 @@
         <div style="width: 200px;padding-left: 30px;font-weight: bold;color: dodgerblue">后台管理</div>
         <div style="flex: 1"></div>
         <div style="width: 100px">
-            <el-dropdown>
+            <el-dropdown :hide-on-click="false">
                 <span class="el-dropdown-link">
                   设置<i class="el-icon-arrow-down el-icon--right"></i>
                 </span>
                 <template #dropdown>
                     <el-dropdown-menu>
-                        <el-dropdown-item>个人信息</el-dropdown-item>
-                        <el-dropdown-item>退出系统</el-dropdown-item>
+                        <el-dropdown-item disabled>个人信息</el-dropdown-item>
+                        <el-dropdown-item disabled>退出系统</el-dropdown-item>
                     </el-dropdown-menu>
                 </template>
             </el-dropdown>
