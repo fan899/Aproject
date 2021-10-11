@@ -4,10 +4,10 @@
             <div style="color: #cccccc;font-size: 30px;text-align: center;padding: 15px">欢迎登录</div>
             <el-form ref="form" :model="form" size="normal">
                 <el-form-item>
-                    <el-input prefix-icon="el-icon-user" v-model="form.userId"></el-input>
+                    <el-input prefix-icon="el-icon-user" v-model="form.adminId"></el-input>
                 </el-form-item>
                 <el-form-item>
-                    <el-input prefix-icon="el-icon-lock" v-model="form.userPwd" show-password></el-input>
+                    <el-input prefix-icon="el-icon-lock" v-model="form.adminPwd" show-password></el-input>
                 </el-form-item>
                 <el-form-item>
                     <el-button style="width: 100%" type="primary" @click="login">登录</el-button>
@@ -30,7 +30,7 @@
         methods: {
             /*登录*/
             login(){
-                request.post("/api/userController/login",this.form).then(res =>{
+                request.post("/api/adminController/login",this.form).then(res =>{
                     if (res.code === '0'){
                         this.$messageBox({
                             type: "success",
@@ -40,7 +40,7 @@
                     }else {
                         this.$messageBox({
                             type: "error",
-                            message: res.msq
+                            message: "用户名或密码错误！"
                         })
                     }
                 })

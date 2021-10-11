@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.example.entity.Admin;
 import com.example.mapper.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,39 +13,10 @@ public class AdminService {
     @Autowired
     AdminMapper adminMapper;
 
-    /*查询所有数据*/
-    public Admin selectById(int adminId){
-        return adminMapper.selectById(adminId);
+    /*登录*/
+    public Admin login(Admin admin){
+        Admin res=adminMapper.selectOne(Wrappers.<Admin>lambdaQuery().eq(Admin::getAdminId,admin.getAdminId()).eq(Admin::getAdminPwd,admin.getAdminPwd()));
+        return res;
     }
 
-    /*public int selectByIdPwd(String username,String password){
-        return adminMapper.selectByIdPwd(username,password);
-    }*/
-
-    /*添加数据*/
-    public List<Admin> selectAll(){
-        return adminMapper.selectAll();
-    }
-
-    /*public int insertUser(){
-        return adminMapper.insertUser();
-    }*/
-
-    /*添加数据*/
-    public int insertAdmin(int adminId,String adminPwd){
-        return  adminMapper.insertAdmin(adminId,adminPwd);
-    }
-
-    /*根据adminId删除数据*/
-    public int deleteById(int adminId){
-        return adminMapper.deleteById(adminId);
-    }
-
-    /*根据adminId修改密码*/
-    public int updateById(int adminId,String adminPwd){
-        return adminMapper.updateById(adminId,adminPwd);
-    }
-
-    /*登录验证*/
-    public int login(int adminId,String adminPwd){return adminMapper.login(adminId,adminPwd);}
 }
