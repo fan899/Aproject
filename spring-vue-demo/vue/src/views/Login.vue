@@ -36,7 +36,7 @@
                             type: "success",
                             message: "登录成功"
                         })
-                        this.$router.push("/")  /*登录成功后跳转到后台页面*/
+                        this.$router.push("/home")  /*登录成功后跳转到后台页面*/
                     }else {
                         this.$messageBox({
                             type: "error",
